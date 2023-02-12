@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping single column coming soon page</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body onload="initElements()">
+    <header>
+      <img src="images/logo.svg" alt aria-hidden="true" />
+      <div class="main-form">
+        <h1>We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+        <form action="javascript:validate();">
+          <div id="email-container">
+            <div class="input-message">
+              <input
+                type="text"
+                name="email"
+                id="email-field"
+                placeholder="Your email address..."
+              />
+              <div id="message-box"><p></p></div>
+            </div>
+            <input type="submit" value="Notify Me" aria-label="Notify Me" />
+          </div>
+        </form>
+      </div>
+    </header>
+    <main>
+      <img
+        src="images/illustration-dashboard.png"
+        alt="Dashboard"
+        aria-hidden="true"
+      />
+    </main>
+    <footer>
+      <div class="social-icon-container">
+        <a
+          class="social-icon"
+          href="https://rashidshamloo.github.com"
+          title="GitHub"
+          target="_blank"
+          ><i class="bi-github"></i
+        ></a>
+        <a
+          class="social-icon"
+          href="https://twitter.com/rashidshamloo"
+          title="Twitter"
+          target="_blank"
+          ><i class="bi-twitter"></i
+        ></a>
+        <a
+          class="social-icon"
+          href="https://www.linkedin.com/in/rashid-shamloo/"
+          title="Linked-in"
+          target="_blank"
+          ><i class="bi-linkedin"></i
+        ></a>
+      </div>
+      <p>Developed by Rashid Shamloo</p>
+    </footer>
+  </body>
+</html>

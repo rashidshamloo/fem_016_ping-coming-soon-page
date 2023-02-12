@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  color: hsl(0deg, 0%, 59%);
+  min-height: 100vh;
+  font-size: 1.25rem;
+  padding: 2rem;
+  row-gap: 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+  row-gap: 2.5rem;
+}
+header > img {
+  width: 3.6rem;
+  height: auto;
+}
+header .main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  width: 90%;
+}
+header .main-form h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+header .main-form h1 span {
+  font-weight: 700;
+  color: hsl(209deg, 33%, 12%);
+}
+header .main-form p {
+  font-size: 0.75rem;
+  color: hsl(209deg, 33%, 12%);
+}
+header form {
+  width: 100%;
+}
+header #email-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+header #email-container input[type=text] {
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: hsl(223deg, 100%, 88%);
+  border-radius: 5rem;
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 1rem;
+  letter-spacing: 0.05rem;
+  outline: none;
+  color: hsl(209deg, 33%, 12%);
+  font-size: 0.75rem;
+  font-family: "Libre Franklin", sans-serif;
+}
+header #email-container input[type=text]::-moz-placeholder {
+  color: rgba(194, 211, 255, 0.6);
+}
+header #email-container input[type=text]::placeholder {
+  color: rgba(194, 211, 255, 0.6);
+}
+header #email-container input[type=text].border-red {
+  border-color: hsl(354deg, 100%, 66%);
+}
+header #email-container input[type=text].border-green {
+  border-color: green;
+}
+header #email-container #message-box {
+  display: none;
+  margin: 0.1rem 0 0.25rem 1rem;
+}
+header #email-container #message-box P {
+  font-size: 0.685rem;
+  color: hsl(354deg, 100%, 66%);
+}
+header #email-container #message-box.success-message p {
+  color: green;
+}
+header #email-container input[type=submit] {
+  cursor: pointer;
+  border: none;
+  background-color: hsl(223deg, 87%, 63%);
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.7rem;
+  border-radius: 20rem;
+  box-shadow: 0 0.5rem 1rem rgba(79, 125, 243, 0.3);
+  color: white;
+  font-size: 0.75rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: auto;
+}
+footer .social-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+footer .social-icon-container .social-icon {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 0.05rem solid hsl(223deg, 100%, 88%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: hsl(223deg, 87%, 63%);
+}
+footer p {
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 4.25vw;
+  }
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 2.2vh;
+  }
+  body {
+    padding: 1rem;
+  }
+  header,
+  main,
+  footer {
+    width: 30rem;
+    margin: 0;
+  }
+  header {
+    margin-top: 3rem;
+    row-gap: 2.5rem;
+  }
+  header .main-form {
+    row-gap: 1rem;
+    width: 90%;
+  }
+  header .main-form h1 {
+    font-size: 2rem;
+  }
+  header .main-form p {
+    font-size: 0.95rem;
+  }
+  header form {
+    width: 100%;
+  }
+  header #email-container {
+    flex-direction: row;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+    width: 100%;
+  }
+  header #email-container .input-message {
+    flex-grow: 1;
+  }
+  header #email-container input[type=text] {
+    border-width: 0.05rem;
+  }
+  header #email-container input[type=submit] {
+    margin: 0;
+    width: 9rem;
+  }
+  footer {
+    margin-top: 0;
+  }
+  footer .social-icon-container .social-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (pointer: fine) {
+  header .main-form #email-container input[type=submit]:hover {
+    filter: brightness(130%);
+  }
+  footer .social-icon-container .social-icon:hover {
+    color: white;
+    background-color: hsl(223deg, 87%, 63%);
+  }
+}/*# sourceMappingURL=style.css.map */
